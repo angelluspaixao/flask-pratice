@@ -13,15 +13,20 @@ def login():
 def signup():
     return render_template('signup.html')
 
-#GET,POST - LOG OFF
-@app.route('/logoff')
-def logoff():
-    return render_template('logoff.html')
+#GET - USERS HOME
+@app.route('/user/<user_name>')
+def home(user_name):
+    return render_template('user.html', user_name=user_name)
 
 #GET,POST - UPDATE SETTINGS
 @app.route('/settings')
 def update():
     return render_template('settings.html')
+
+#GET,POST - LOG OFF
+@app.route('/logoff')
+def logoff():
+    return render_template('logoff.html')
 
 #GET,DELETE - DELETE CREDENCIALS
 @app.route('/delete')
