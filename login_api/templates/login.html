@@ -6,15 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flask Pratice - Login</title>
 </head>
+<style>
+    @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&display=swap);
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+        text-align: center;
+        min-height: 100vh;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+</style>
 <body>
     <h1>Login</h1>
-    <form action="http://127.0.0.1:5000/" method="post">
-        <label for="email">E-mail</label>
+    <br>
+    <br>
+    <form action="" method="post">
+        <label for="email">Usuário</label>
+        <br>
+        <input type="text" name="username" id="username" placeholder="Seu melhor usuário" required>
+        <!-- <label for="email">E-mail</label>
         <input type="email" name="email" id="email" placeholder="Seu melhor e-mail" required>
-        <br>
-        <label for="pass">Senha</label>
+        <br> -->
+        <!-- <label for="pass">Senha</label>
         <input type="password" name="pass" id="pass" placeholder="Sua melhor senha" required>
-        <br>
+        <br> -->
         <input type="submit" value="Enviar">
     </form>
 </body>
