@@ -1,8 +1,12 @@
 import flask
 from flask import redirect, render_template, request, session, url_for
+from flask_sqlalchemy import SQLAlchemy
 
 app = flask.Flask(__name__)
 app.secret_key = 'b1R0sC4'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///usuarios.sqlite3'
+
+db = SQLAlchemy(app)
 
 #GET,POST - INDEX LOG IN
 @app.route('/')
